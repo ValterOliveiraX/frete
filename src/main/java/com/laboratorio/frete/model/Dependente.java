@@ -15,7 +15,7 @@ public class Dependente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idDependente;
+    private Integer id;
     private String nome;
     private LocalDate dataNascimento;    
 }

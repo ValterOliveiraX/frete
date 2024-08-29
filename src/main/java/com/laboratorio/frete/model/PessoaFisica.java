@@ -13,7 +13,7 @@ public class PessoaFisica {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idPessoaFisica;
+    private Integer id;
     private String nome;
     private String email;
     private String telefone;

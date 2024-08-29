@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter @Setter
 public class Funcionario {
 
-      @Id
+    @Id
     private Integer matricula;
     
     @ManyToOne
