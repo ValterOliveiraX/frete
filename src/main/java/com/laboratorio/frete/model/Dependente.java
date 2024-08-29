@@ -1,7 +1,6 @@
 package com.laboratorio.frete.model;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,5 +16,7 @@ public class Dependente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    private LocalDate dataNascimento;    
+    private LocalDate dataNascimento;  
+    
+    //getters e setters definidos pelo lombook
 }

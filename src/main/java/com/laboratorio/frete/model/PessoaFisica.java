@@ -18,5 +18,7 @@ public class PessoaFisica {
     private String email;
     private String telefone;
     private String cpf;
+
+    // Getters e Setters definidos pelo lombook
 }
 

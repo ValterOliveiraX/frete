@@ -1,5 +1,5 @@
 package com.laboratorio.frete.model;
-import org.hibernate.mapping.List;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,4 +25,6 @@ public class Veiculo {
 
     @OneToMany(mappedBy = "veiculo")
     private List<Frete> fretes;
+
+    //getters e setters definidos pelo lombook
 }

@@ -6,8 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter @Setter
 public class CategoriaFrete {
         
     @Id
@@ -21,6 +24,6 @@ public class CategoriaFrete {
     @OneToMany(mappedBy = "categoriaFrete")
     private List<Frete> fretes;
 
-    // Getters e Setters
+       //getters e setters definidos pelo lombook
     
 }

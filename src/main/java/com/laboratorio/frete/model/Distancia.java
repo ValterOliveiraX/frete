@@ -5,7 +5,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 public class Distancia {
         
     @Id
@@ -21,5 +24,7 @@ public class Distancia {
     @ManyToOne
     @JoinColumn(name = "cidadeDestino_id")
     private Cidade cidadeDestino;
+
+    //getters e setters definidos pelo lombook
     
 }

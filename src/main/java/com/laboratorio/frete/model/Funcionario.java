@@ -23,5 +23,7 @@ public class Funcionario {
     
     @OneToMany(mappedBy = "funcionario")
     private List<Dependente> dependentes;
+
+    // Getters e Setters definidos pelo lombook
     
 }

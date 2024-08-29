@@ -15,5 +15,7 @@ public class Filial {
     private Integer id;
     private String nome;
     private String endereco;
+
+    //getters e setters definidos pelo lombook
         
 }
