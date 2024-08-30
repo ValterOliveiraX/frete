@@ -8,8 +8,8 @@ public class Main {
         CidadeDAO cidadeDAO = new CidadeDAO();
 
         // Criando e salvando uma nova cidade
-        Cidade cidade = new Cidade("São Paulo", "SP");
-        cidadeDAO.save(cidade);
+     //   Cidade cidade = new Cidade("São Paulo", "SP");
+       // cidadeDAO.save(cidade);
 
         // Buscando uma cidade por ID
         Cidade cidadeEncontrada = cidadeDAO.findById(1L);

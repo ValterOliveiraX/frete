@@ -14,12 +14,12 @@ import lombok.Setter;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer idCliente;
     private String contato;
     private Boolean ativo;
 
     @ManyToOne
-    @JoinColumn(name = "pessoaFisica_id")
+    @JoinColumn(name = "fk_pessoa_fisica")
     private PessoaFisica pessoafisica;
 
     //getters e setters definidos pelo lombook

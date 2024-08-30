@@ -1,13 +1,10 @@
 package com.laboratorio.frete.model;
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,14 +14,17 @@ public class Veiculo {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idVeiculo;
+
     private String numeroPlaca;
 
     @ManyToOne
-    @JoinColumn(name = "filial_id")
+    @JoinColumn(name = "fk_filial")
     private Filial filial;
 
-    @OneToMany(mappedBy = "veiculo")
-    private List<Frete> fretes;
+    @ManyToOne
+    @JoinColumn(name = "fk_tipo_veiculo")
+    private TipoVeiculo tipoVeiculo;
 
     //getters e setters definidos pelo lombook
 }

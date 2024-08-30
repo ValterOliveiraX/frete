@@ -15,16 +15,16 @@ public class Distancia {
         
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private  Integer idDistancia;
     
     private Integer quilometros;
 
     @ManyToOne
-    @JoinColumn(name = "cidadeOrigem_id")
+    @JoinColumn(name = "fk_cidade_origem")
     private Cidade cidadeOrigem;
 
     @ManyToOne
-    @JoinColumn(name = "cidadeDestino_id")
+    @JoinColumn(name = "fk_cidade_destino")
     private Cidade cidadeDestino;
 
     //getters e setters definidos pelo lombook
