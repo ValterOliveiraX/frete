@@ -9,5 +9,4 @@ public class FreteApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FreteApplication.class, args);
 	}
-
 }
