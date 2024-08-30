@@ -14,13 +14,16 @@ import lombok.Setter;
 @Getter @Setter
 public class Cidade {
         
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
     private String uf;
     private String nome;
     private String estado;
+
+    // Construtor padrão (necessário para JPA)
+    public Cidade(String string, String string2) {}
 
     @OneToMany(mappedBy = "cidadeOrigem")
     private List<Frete> fretesOrigem;

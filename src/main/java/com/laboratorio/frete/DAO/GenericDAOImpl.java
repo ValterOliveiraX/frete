@@ -7,14 +7,19 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.criteria.CriteriaQuery;
 
+
 public class GenericDAOImpl<T> implements GenericDAO<T> {
 
     private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("seu-persistence-unit");
-    //private EntityManager GerenciadorEntida
-
     private EntityManager GerenciadorEntidade;
     private Class<T> entityClass;
    
+
+    public GenericDAOImpl(Class<T> entityClass) {
+        this.entityClass = entityClass;
+        GerenciadorEntidade = emf.createEntityManager();
+    }
+
 
 
     @Override
