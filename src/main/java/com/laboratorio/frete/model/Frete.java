@@ -1,28 +1,34 @@
 package com.laboratorio.frete.model;
 
-import java.math.BigDecimal;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Builder
 @Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Frete {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idFrete;
-
-    private Long codigo;
     
     private Integer numeroNotaFiscal;
-    private BigDecimal valorKmRodado;
+    private Double valorKmRodado;
 
     @ManyToOne
     @JoinColumn(name = "fk_cidade_origem")
@@ -43,5 +49,8 @@ public class Frete {
     @ManyToOne
     @JoinColumn(name = "fk_cliente")
     private Cliente cliente;
+
+    @OneToMany(mappedBy = "frete", cascade = CascadeType.PERSIST)
+    private List<ItemFrete> itens;
     // Getters e Setters definidos pelo lombook
 }

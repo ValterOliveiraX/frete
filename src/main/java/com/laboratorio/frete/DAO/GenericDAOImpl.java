@@ -45,7 +45,6 @@ public class GenericDAOImpl<T> implements GenericDAO<T> {
 
     @Override
     public T findById(Long id) {
-        // TODO Auto-generated method stub
         return GerenciadorEntidade.find(entityClass, id);
     }
 

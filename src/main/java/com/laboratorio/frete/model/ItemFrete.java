@@ -6,11 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Builder
 @Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ItemFrete {
 
     @Id
@@ -18,7 +24,7 @@ public class ItemFrete {
     private Integer idItemFrete;
     
     private String descricao;
-    private Float peso;
+    private Double peso;
 
     @ManyToOne
     @JoinColumn(name = "fk_frete")
